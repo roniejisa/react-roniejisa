@@ -7,7 +7,7 @@ import path from "path";
 export const alias = (
     sources = {
         "~~": "src",
-        "@@":"utils",
+        "@utils":"utils",
         "##": "src/components",
     }
 ) => {
