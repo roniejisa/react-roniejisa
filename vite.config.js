@@ -4,5 +4,5 @@ import { alias } from "./configs/viteConfig";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), alias()],
+	plugins: [react(), alias([{"~~":"src"}])],
 });
