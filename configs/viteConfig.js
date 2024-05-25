@@ -7,7 +7,8 @@ import path from "path";
 export const alias = (
     sources = {
         "~~": "src",
-        "##p": "src/components",
+        "@@":"utils",
+        "##": "src/components",
     }
 ) => {
     return {
@@ -15,6 +16,7 @@ export const alias = (
         transform: (src) => {
             // Lấy đường dẫn tuyệt đối tới thư mục src và chuẩn hóa nó
             for (const [alias, source] of Object.entries(sources)) {
+                // eslint-disable-next-line no-undef
                 const srcPath = path.resolve(process.cwd(), source).replace(/\\/g, '/');
                 // Biểu thức chính quy để tìm các đường dẫn sau từ khóa import hoặc require
                 const regex = new RegExp(`((import||export||require)\\s*(?:.*?from\\s*)?['"\`])${alias}([^'"\`]+['"\`])`, 'g');

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 // import { useQueryParams } from "../utils/hooks";
-import { httpGet } from "##/http";
-import Button from "--/Button";
-import Home from "--/pages/Home";
+import { httpGet } from "@utils/http";
+import Button from "##/Button";
+import Home from "##/pages/Home";
 
 const Test = () => {
 	useEffect(() => {
